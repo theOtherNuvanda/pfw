@@ -1,21 +1,17 @@
 package server;
 
 import java.util.HashMap;
-import java.util.Map;
-import java.util.List;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
-import client.SnakeTest;
 import processing.core.PVector;
-
 import shared.Connection;
+import shared.Food;
 import shared.MessageHandler;
 import shared.Snake;
-import shared.Food;
-
-import static client.SnakeTest.*;
 
 public class Game extends Thread{
 

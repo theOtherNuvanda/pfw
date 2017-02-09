@@ -55,7 +55,8 @@ public abstract class Connection extends Thread {
     }
 
     public void handle(String msg) {
-        Scanner scanner = new Scanner(msg).useLocale(Locale.US);
+        Scanner scanner = new Scanner(msg);
+        scanner.useLocale(Locale.US);
         String type = scanner.next();
         MessageHandler handler = handlers.get(type);
         if (handler != null) {
@@ -63,6 +64,7 @@ public abstract class Connection extends Thread {
         } else {
             System.out.println("Received an unhandled message of type " + type);
         }
+        scanner.close();
     }
 
     public MessageHandler
