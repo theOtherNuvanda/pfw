@@ -1,6 +1,29 @@
+
+#
+# Files not to be tracked by version control.
+#
+# This file contains globs, to match files that git shall not put under version
+# control, because they are either not part of Tanura, or are runtime artefacts,
+# like logs and caches.
+#
+
 .DS_Store
 **.swp
-.idea/
+/.idea/
 *.iml
-out/
-lib/
+/out/
+/lib/
+/bin/
+.classpath
+.project
+
+*~
+*.bak
+*.old
+
+logs
+*.log
+
+pids
+*.pid
+*.seed
